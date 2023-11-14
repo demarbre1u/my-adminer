@@ -12,10 +12,12 @@ function adminer_object()
     // enable extra drivers just by including them
     //~ include "./plugins/drivers/simpledb.php";
 
+    $configs = include 'configs.php';
+
     $plugins = array(
         // specify enabled plugins here
-        new OneClickLogin(include 'servers.php', "pgsql"),
-        new FasterTablesFilter()
+        new OneClickLogin($configs["servers"], "pgsql"),
+        new FasterTablesFilter(),
     );
 
     /* It is possible to combine customization and plugins:

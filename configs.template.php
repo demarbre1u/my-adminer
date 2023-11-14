@@ -1,5 +1,8 @@
 <?php
-return [
+
+$configs = [];
+
+$configs["servers"] = [
     "{env_name}" => [
         '{host}' => [
             'username'  => '{username}',
@@ -10,3 +13,5 @@ return [
         ],
     ]
 ];
+
+return $configs;
