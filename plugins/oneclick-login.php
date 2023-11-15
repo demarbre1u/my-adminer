@@ -73,9 +73,9 @@ class OneClickLogin
                     ?>
 
                         <tr>
-                            <td><?= $host ?></th>
-                            <td><?= $server["username"] ?></th>
-                            <td><?= $db_label ?></th>
+                            <td style="width: 33%"><?= $host ?></th>
+                            <td style="width: 33%"><?= $server["username"] ?></th>
+                            <td style="width: 33%"><?= $db_label ?></th>
                             <td style="width: 0%">
                                 <form action="" method="post">
                                     <input type="hidden" name="auth[driver]" value="<?= $this->driver; ?>">
