@@ -65,7 +65,7 @@ class OneClickLogin
                 <?php
                 foreach ($servers as $host => $server) {
                     $databases = $server['databases'];
-
+                    $driver = $server["driver"] ?? $this->driver;
                 ?>
 
                     <?php
@@ -78,7 +78,7 @@ class OneClickLogin
                             <td style="width: 33%"><?= $db_label ?></th>
                             <td style="width: 0%">
                                 <form action="" method="post">
-                                    <input type="hidden" name="auth[driver]" value="<?= $this->driver; ?>">
+                                    <input type="hidden" name="auth[driver]" value="<?= $driver; ?>">
                                     <input type="hidden" name="auth[server]" value="<?= $host; ?>">
                                     <input type="hidden" name="auth[username]" value="<?= h($server["username"]); ?>">
                                     <input type="hidden" name="auth[password]" value="<?= h($server["pass"]); ?>">
