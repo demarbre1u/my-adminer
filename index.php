@@ -18,6 +18,7 @@ function adminer_object()
         // specify enabled plugins here
         new OneClickLogin($configs["servers"], "pgsql"),
         new FasterTablesFilter(),
+        new AdminerAutocomplete()
     );
 
     /* It is possible to combine customization and plugins:
