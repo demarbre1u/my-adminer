@@ -89,19 +89,19 @@ class AdminerAutocomplete
                         const buttonList = [
                         {
                         label: "SELECT",
-                        query: "SELECT * \nFROM \"tmp\"\n"
+                        query: "SELECT * \nFROM \"tmp\";\n"
                         },
                         {
                         label: "INSERT",
-                        query: "INSERT INTO \"tmp\" (col1, col2) \nVALUES ('val1', 'val2')\n"
+                        query: "INSERT INTO \"tmp\" (col1, col2) \nVALUES ('val1', 'val2');\n"
                         },
                         {
                         label: "UPDATE",
-                        query: "UPDATE \"tmp\" \nSET col1 = 'val1', col2 = 'val2' \nWHERE 1=1\n"
+                        query: "UPDATE \"tmp\" \nSET col1 = 'val1', col2 = 'val2' \nWHERE 1=1;\n"
                         },
                         {
                         label: "DELETE",
-                        query: "DELETE FROM \"tmp\" \nWHERE 1=1\n"
+                        query: "DELETE FROM \"tmp\" \nWHERE 1=1;\n"
                         },
                         ]
 
