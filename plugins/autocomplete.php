@@ -107,6 +107,19 @@ class AdminerAutocomplete
                             },
                             ]
 
+                            <?php
+
+                            // If there is a query already in GET params
+                            if ($_GET["sql"]) {
+                            ?>
+                                editor.getSession().setValue(sqlFormatter.format(`<?= addslashes($_GET["sql"]) ?>`, { dialect: "postgresql" }));
+                                editor.focus();
+
+                            <?php
+                            }
+
+                            ?>
+
                             const shortcutWrapper = document.createElement("div");
                             shortcutWrapper.classList.add("shortcut-wrapper");
                             form.appendChild(shortcutWrapper)
