@@ -1137,6 +1137,12 @@ a[href="#import"] {
   margin: 0;
 }
 
+#sql-1 {
+  background-color: #000128;
+  padding: 15px;
+  border-radius: 8px;
+}
+
 /* Plugins */
 #filter-field {
   box-sizing: border-box;
