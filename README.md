@@ -9,5 +9,5 @@ Theme based on [Hydra Dark Theme](https://github.com/Niyko/Hydra-Dark-Theme-for-
 ## Plugins
 
 - [Faster tables filter](https://github.com/LinkedList/FasterTablesFilter)
-
 - [One click login](https://github.com/giofreitas/one-click-login)
+- [Autocomplete](https://github.com/dg/adminer/blob/master/plugins/autocomplete.php)
