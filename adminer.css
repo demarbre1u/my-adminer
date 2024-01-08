@@ -1137,7 +1137,7 @@ a[href="#import"] {
   margin: 0;
 }
 
-#sql-1 {
+pre[id^="sql-"] {
   background-color: #000128;
   padding: 15px;
   border-radius: 8px;
@@ -1169,4 +1169,10 @@ pre {
 
 .oneclick-login__table td {
   padding: 5px 10px;
+}
+
+.error b {
+  background: #fff;
+  font-weight: normal;
+  color: #7962f2;
 }
