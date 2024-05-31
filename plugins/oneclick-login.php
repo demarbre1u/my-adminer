@@ -32,6 +32,9 @@ class OneClickLogin
             $exists = isset($servers[SERVER]);
 
             if ($exists) {
+                // use on autocomplete extention
+                define("DIALECT", $servers[SERVER]['dialect']);
+
                 return true;
             }
         }
