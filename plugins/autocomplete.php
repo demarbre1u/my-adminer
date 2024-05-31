@@ -117,7 +117,7 @@ class AdminerAutocomplete
                             // If there is a query already in GET params
                             if ($_GET["sql"]) {
                             ?>
-                                editor.getSession().setValue(sqlFormatter.format(`<?= addslashes($_GET["sql"]) ?>`, { dialect: "<?= $this->language ?>" }));
+                                editor.getSession().setValue(sqlFormatter.format(`<?= addslashes($_GET["sql"]) ?>`, { language: "<?= $this->language ?>" }));
                                 editor.focus();
 
                             <?php
@@ -137,7 +137,7 @@ class AdminerAutocomplete
                             event.preventDefault();
                             editor.insert(query);
                             const code = editor.getSession().getValue();
-                            editor.getSession().setValue(sqlFormatter.format(code, { dialect: "<?= $this->language ?>"}));
+                            editor.getSession().setValue(sqlFormatter.format(code, { language: "<?= $this->language ?>"}));
                             editor.focus();
                             });
                             shortcutWrapper.appendChild(buttonElem)
@@ -150,7 +150,7 @@ class AdminerAutocomplete
                             event.preventDefault();
                             // prettify
                             const code = editor.getSession().getValue();
-                            editor.getSession().setValue(sqlFormatter.format(code, { dialect: "<?= $this->language ?>"}));
+                            editor.getSession().setValue(sqlFormatter.format(code, { language: "<?= $this->language ?>"}));
                             editor.focus();
                             });
 
