@@ -12,11 +12,16 @@ class AdminerAutocomplete
         'LIMIT', 'LEFT JOIN', 'NULL', 'ORDER BY', 'ON DUPLICATE KEY UPDATE', 'SELECT', 'UPDATE', 'WHERE',
     ];
 
+    private $language = 'mysql';
 
     public function head()
     {
         if (!isset($_GET['sql'])) {
             return;
+        }
+
+        if (!empty(DIALECT)) {
+            $this->language = DIALECT;
         }
 
         $suggests = [];
@@ -112,7 +117,7 @@ class AdminerAutocomplete
                             // If there is a query already in GET params
                             if ($_GET["sql"]) {
                             ?>
-                                editor.getSession().setValue(sqlFormatter.format(`<?= addslashes($_GET["sql"]) ?>`, { dialect: "postgresql" }));
+                                editor.getSession().setValue(sqlFormatter.format(`<?= addslashes($_GET["sql"]) ?>`, { dialect: "<?= $this->language ?>" }));
                                 editor.focus();
 
                             <?php
@@ -132,7 +137,7 @@ class AdminerAutocomplete
                             event.preventDefault();
                             editor.insert(query);
                             const code = editor.getSession().getValue();
-                            editor.getSession().setValue(sqlFormatter.format(code, { dialect: "postgresql" }));
+                            editor.getSession().setValue(sqlFormatter.format(code, { dialect: "<?= $this->language ?>"}));
                             editor.focus();
                             });
                             shortcutWrapper.appendChild(buttonElem)
@@ -145,7 +150,7 @@ class AdminerAutocomplete
                             event.preventDefault();
                             // prettify
                             const code = editor.getSession().getValue();
-                            editor.getSession().setValue(sqlFormatter.format(code, { dialect: "postgresql" }));
+                            editor.getSession().setValue(sqlFormatter.format(code, { dialect: "<?= $this->language ?>"}));
                             editor.focus();
                             });
 
