@@ -1004,9 +1004,6 @@ select option {
   background: #221f2e;
   color: #fff;
 }
-select[name="db"] option {
-  background: #ffffff;
-}
 .message {
   padding: 13px;
   background: #7962f2;
