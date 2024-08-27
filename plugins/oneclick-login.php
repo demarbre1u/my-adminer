@@ -58,7 +58,7 @@ class OneClickLogin
 
     function loginForm()
     {
-        foreach ($this->servers as $env_name => $servers) {
+        foreach ($this->servers as $env_name => $hosts) {
 ?>
             <table class="oneclick-login__table">
                 <tr>
@@ -66,9 +66,10 @@ class OneClickLogin
                 </tr>
 
                 <?php
-                foreach ($servers as $host => $server) {
-                    $databases = $server['databases'];
-                    $driver = $server["driver"] ?? $this->driver;
+                foreach ($hosts as $host => $servers) {
+                    foreach ($servers as $server) {
+                        $databases = $server['databases'];
+                        $driver = $server["driver"] ?? $this->driver;
                 ?>
 
                     <?php
@@ -93,6 +94,7 @@ class OneClickLogin
                         </tr>
 
                 <?php
+                        }
                     }
                 }
                 ?>
