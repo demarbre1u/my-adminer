@@ -248,7 +248,7 @@ select {
 }
 a,
 a:link {
-  color: #7962f2;
+  color: #7962f2 !important;
   transition: all 0.2s;
 }
 a:hover,
