@@ -977,6 +977,9 @@ textarea {
 code {
   filter: sepia() invert();
   color: #000000;
+  font-size: 14px;
+  padding: 8px 11px;
+  display: inline-block;
 }
 #content legend a {
   color: #7962f2;
@@ -1172,5 +1175,9 @@ pre {
 .error b {
   background: #fff;
   font-weight: normal;
+  color: #7962f2;
+}
+
+.footer a {
   color: #7962f2;
 }
