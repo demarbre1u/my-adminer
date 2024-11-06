@@ -248,7 +248,7 @@ select {
 }
 a,
 a:link {
-  color: #7962f2 !important;
+  color: #7962f2;
   transition: all 0.2s;
 }
 a:hover,
@@ -1172,5 +1172,9 @@ pre {
 .error b {
   background: #fff;
   font-weight: normal;
+  color: #7962f2;
+}
+
+.footer a {
   color: #7962f2;
 }
